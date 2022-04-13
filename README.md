@@ -23,6 +23,8 @@ Para compilar o projeto, execute:
 javac -cp ".:libs/*" -d out br/com/alura/oobj/Main.java
 ```
 
+> No Windows, execute: `javac -cp .;libs/*; -d out br/com/alura/oobj/Main.java`
+
 Esse comando terá o código compilado no diretório `out`.
 
 ## Executando o projeto
@@ -32,6 +34,8 @@ Depois de compilado, você pode executar o projeto para processar o `itens-pedid
 ```sh
 java -cp "out:libs/*" br.com.alura.oobj.Main itens-pedido.csv
 ```
+
+> No Windows, execute: `java -cp out;libs/*; br.com.alura.oobj.Main itens-pedido.csv`
 
 Para processar o XML, basta passar `itens-pedido.xml` como parâmetro.
 
