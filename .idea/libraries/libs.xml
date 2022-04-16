@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/commons-collections-3.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/commons-text-1.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/woodstox-core-6.2.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/opencsv-5.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/stax2-api-4.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jackson-dataformat-xml-2.13.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/commons-lang3-3.12.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/commons-collections4-4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jackson-core-2.13.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jackson-databind-2.13.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/commons-beanutils-1.9.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jackson-annotations-2.13.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
