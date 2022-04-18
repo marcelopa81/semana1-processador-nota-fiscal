@@ -57,9 +57,9 @@ public class ItemPedido {
     return classeFiscal;
   }
 
-  public void setClasseFiscal(String classeFiscal) {
-    this.classeFiscal = classeFiscal;
-  }
+//  public void setClasseFiscal(String classeFiscal) {
+//    this.classeFiscal = classeFiscal;
+//  }
 
   @Override
   public String toString() {

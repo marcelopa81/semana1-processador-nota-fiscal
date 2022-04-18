@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.Reader;
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Set;
 
 public class Main {
 
@@ -54,25 +55,27 @@ public class Main {
       totalPedido = totalPedido.add(subtotal);
     }
 
+
     SubTotalPorClasseFiscal subTotalPorClasseFiscal = new SubTotalPorClasseFiscal();
     for (ItemPedido itemPedido : itensPedido) {
       BigDecimal novoSubTotal = itemPedido.getValorUnitario().multiply(BigDecimal.valueOf(itemPedido.getQuantidade()));
       String classeFiscal = itemPedido.getClasseFiscal();
-      BigDecimal subTotal = subTotalPorClasseFiscal.get(classeFiscal);
+      BigDecimal subTotal = subTotalPorClasseFiscal.obterSubTotal(classeFiscal);
       if (subTotal != null) {
-        subTotalPorClasseFiscal.put(classeFiscal, subTotal.add(novoSubTotal));
+        subTotalPorClasseFiscal.adicionaSubTotal(classeFiscal, subTotal.add(novoSubTotal));
       } else {
-        subTotalPorClasseFiscal.put(classeFiscal, novoSubTotal);
+        subTotalPorClasseFiscal.adicionaSubTotal(classeFiscal, novoSubTotal);
       }
     }
 
+
     System.out.println("## Total do pedido: " + totalPedido);
     System.out.println("\n## Subtotal por classe fiscal");
-    for (String classeFiscal : subTotalPorClasseFiscal.keySet()) {
+   for (String classeFiscal : subTotalPorClasseFiscal.obterClasseFiscal()) {
       System.out.println("\n\tClasse fiscal: " + classeFiscal);
-      BigDecimal subtotal = subTotalPorClasseFiscal.get(classeFiscal);
+      BigDecimal subtotal = subTotalPorClasseFiscal.obterSubTotal(classeFiscal);
       System.out.println("\tSubtotal: " + subtotal);
-    }
+   }
 
 
   }
